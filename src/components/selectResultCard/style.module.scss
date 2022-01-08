@@ -1,0 +1,39 @@
+@-webkit-keyframes heartBeat {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    14% {
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3);
+    }
+  
+    28% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    42% {
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3);
+    }
+  
+    70% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
+.container {
+    margin: 15px;
+    .addBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .addBtn:active {
+        color:red;
+        animation: heartBeat 2s;
+    }
+}

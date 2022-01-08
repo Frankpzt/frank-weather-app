@@ -1,0 +1,27 @@
+.container {
+    background: linear-gradient(to right, #b92b27, #1565c0);
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px 15px 15px ;
+    padding: 15px;
+    border-radius: 5px;
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        margin-right: 10px;
+        position: relative;
+        font-size: 40px;
+    }
+    p:after {
+        content: " ";
+        width: 10px;
+        border: solid 2px;
+        padding: 3px;
+        display: inline-block;
+        border-radius: 50%;
+        
+        position: absolute;
+
+    }
+}
