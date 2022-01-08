@@ -1,5 +1,6 @@
 import CityCard from '../../components/cityCard';
 import {Link} from 'react-router-dom';
+import style from "./style.module.scss"
 
 function Main() {
   const cityList = []
@@ -11,8 +12,8 @@ function Main() {
   }
 
   return (
-    <div>
-          <Link to="/SearchBar">
+    <div className={style.container}>
+          <Link to="/SearchBar" className={style.addBtn}>
             <svg
               t="1641391359003"
               className="icon"
@@ -24,10 +25,12 @@ function Main() {
               </path>
             </svg>
           </Link>
-        {cityList.map((cityname) => {
-          return <CityCard key={cityname} cityName={cityname} />;
-        })}
-        <Link to="/RemoveSection">
+        <div className={style.mainContent}>
+          {cityList.map((cityname) => {
+            return <CityCard key={cityname} cityName={cityname} />;
+          })}
+        </div>
+        <Link to="/RemoveSection" className={style.removeBtn}>
           <svg t="1641544570723" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2935" width="32" height="32"><path d="M512 1024a512 512 0 1 1 512-512 512 512 0 0 1-512 512z m0-960a448 448 0 1 0 448 448A448 448 0 0 0 512 64zM288 480h448v64H288v-64z" p-id="2936" fill="#ffffff"></path></svg> 
         </Link>
       </div>

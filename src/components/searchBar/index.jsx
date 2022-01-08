@@ -7,16 +7,10 @@ import {Link} from "react-router-dom"
 function SearchBar(props) {
     const [searchKeyWord, setSearchKeyWord] = useState("");
     const [cityList, setCityList] = useState([]);
-    const [selectedKeyWord, setSelectedKeyWord] = useState("");
     const [noResults, setNoResults] = useState(false);
 
     const searchKeyWordOnchange = (e) => {
         setSearchKeyWord(e.target.value)
-    }
-    const selectedKeyWordOnchange = (e) => {
-        console.log(e.target.value);
-        setSelectedKeyWord(e.target.value)
-
     }
     const searchAndSetCityList = async () => {
         const data = await searchCity(searchKeyWord);
@@ -34,21 +28,7 @@ function SearchBar(props) {
         searchAndSetCityList();        
     }
 
-    const addCityToLocalStorage = () => {
-        // e.preventDefault();
-        if (selectedKeyWord === "") {
-            console.log(cityList[0].name);
-            localStorage.setItem(cityList[0].name,cityList[0].name);
-            return
-        }
-        localStorage.setItem(selectedKeyWord,selectedKeyWord);
-    }
 
-    const listItems = cityList.map((city) => {
-        return (
-            <option key={city.id} value={city.name} defaultValue= {city.name}> {city.name} </option>
-        ) 
-    })
 
     return (
         <div className={style.container}>
