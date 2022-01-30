@@ -1,21 +1,39 @@
 .container {
+    background-image: url("../../assets/bg/night.jpg") ;
+    background-repeat: repeat;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    position: relative;
-    .mainContent {
-        margin-top: 30px;
-    }
-    .addBtn {
-        margin-top: 5px;
-        margin-left: 5px;
+    .setting_btn {
         position: absolute;
-        
+        right: 6%;
+        top: 4vh;
+        &:hover {
+            transform: scale(1.2);
+        }
     }
-    .removeBtn {
-        margin-top: 5px;
-        margin-left: 5px;
-        position: absolute;
-        left: 50px;
-        
+    #btn_group {
+        background: red;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        #remove_btn, .add_btn  {
+            border-radius: 0;
+            width: 45vw;
+            height:8vh;
+        }
+        #remove_btn {
+            margin-right: 3vw;
+        }
+        #add_btn {
+            color: red;
+            margin-left: 2vw;
+        }
+    }
+    .add_btn {
+        color: red;
+        margin-left: 2vw;
     }
 }

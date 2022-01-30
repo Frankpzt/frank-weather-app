@@ -25,6 +25,7 @@ function CityCard(props) {
             async function fetchAndSetData() {
                 try {
                     const response = await getWeatherByCityName(props.cityName);
+                    console.log(response.location.name);
                     const data = {
                         name: response.location.name,
                         country: response.location.country,
@@ -41,14 +42,14 @@ function CityCard(props) {
                     setCondition(condition)
                     conditions.forEach(e => {
                         if (e.code === condition.code) {
-                            console.log(e.languages[3]);
+                            // console.log(e.languages[3]);
                             setCondition({...condition, zh_text: e.languages[3].day_text})
                         }
                     })
                 } catch (error) {
                     console.log(error);
                     setWeatherInfo({
-                        name: "error",
+                        name: "opps... please refreash your page.",
                         country: "",
                         localtime: "",
                         temp: "",
@@ -58,11 +59,12 @@ function CityCard(props) {
 
         }
         fetchAndSetData();
+        const interval = setInterval(fetchAndSetData, 10000)
         return () => {
             console.log("destroyed");
             setWeatherInfo({});
-            setCondition({}) 
-
+            setCondition({});
+            clearInterval(interval);
           };
     }, [props.cityName])
     const showDetail = () => {
@@ -75,7 +77,7 @@ function CityCard(props) {
     }
     return (
         <>
-            <div className={style.container} onClick={showDetail}>
+            <div className={style.container} onClick={props.clickDisabled? () => {} : showDetail}>
                 <h1>{weatherInfo.name}</h1>
                 <h2> <p>{weatherInfo.temp}</p> </h2>
             </div>

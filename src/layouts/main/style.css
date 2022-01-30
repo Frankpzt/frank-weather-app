@@ -1,0 +1,10 @@
+#btn_group {
+    display:flex;
+    gap: 0.35em;
+    align-items: center;
+    justify-content: center;
+}
+
+#add_btn, #remove_btn {
+    width: 140px;
+}

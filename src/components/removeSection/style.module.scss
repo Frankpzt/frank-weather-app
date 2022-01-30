@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    .close_btn {
+        width:fit-content;
+        position: relative;
+        display: flex;
+        align-self: flex-end;  
+        margin-right: 15px; 
+        margin-top: 15px;
+        &:hover {
+            background: rgba(255, 0, 0, 0.582);
+            border-radius: 50%;
+        }     
+    }
+}

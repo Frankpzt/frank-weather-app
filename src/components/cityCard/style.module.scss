@@ -1,17 +1,28 @@
 .container {
-    background: linear-gradient(to right, #b92b27, #1565c0);
+    // background: linear-gradient(to right, #b92b27, #1565c0);
+    border-bottom: 2px solid rgb(197, 190, 190);
     display: flex;
     justify-content: space-between;
     margin: 15px 15px 15px 15px ;
     padding: 15px;
     border-radius: 5px;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.025);
+    }
     h1 {
-        font-size: 40px;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.025);
+        }
+        color : rgb(255, 255, 255);
+        font-size: 33px;
     }
     h2 {
+        color : rgb(255, 255, 255);
         margin-right: 10px;
         position: relative;
-        font-size: 40px;
+        font-size: 33px;
     }
     p:after {
         content: " ";
@@ -20,7 +31,6 @@
         padding: 3px;
         display: inline-block;
         border-radius: 50%;
-        
         position: absolute;
 
     }

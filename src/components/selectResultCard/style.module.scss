@@ -1,4 +1,4 @@
-@-webkit-keyframes heartBeat {
+@keyframes heartBeat {
     0% {
       -webkit-transform: scale(1);
       transform: scale(1);
@@ -26,14 +26,17 @@
   }
 
 .container {
+    // position: relative;
+    // display: flex;
     margin: 15px;
-    .addBtn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .dispalyArea {
+
+      width: 100%;
     }
-    .addBtn:active {
-        color:red;
-        animation: heartBeat 2s;
+    .addBtn {
+      
+      text-decoration: none;
+      right: 0;
+      width: fit-content;
     }
 }
