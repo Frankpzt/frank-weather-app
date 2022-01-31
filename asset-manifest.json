@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/frank-weather-app/static/css/main.740ef523.css",
-    "main.js": "/frank-weather-app/static/js/main.2d2323a4.js",
+    "main.js": "/frank-weather-app/static/js/main.b6a8e095.js",
     "static/js/787.c7228d4d.chunk.js": "/frank-weather-app/static/js/787.c7228d4d.chunk.js",
     "static/media/night.jpg": "/frank-weather-app/static/media/night.e1e68769fcbe75b43a2c.jpg",
     "index.html": "/frank-weather-app/index.html",
     "main.740ef523.css.map": "/frank-weather-app/static/css/main.740ef523.css.map",
-    "main.2d2323a4.js.map": "/frank-weather-app/static/js/main.2d2323a4.js.map",
+    "main.b6a8e095.js.map": "/frank-weather-app/static/js/main.b6a8e095.js.map",
     "787.c7228d4d.chunk.js.map": "/frank-weather-app/static/js/787.c7228d4d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.740ef523.css",
-    "static/js/main.2d2323a4.js"
+    "static/js/main.b6a8e095.js"
   ]
 }
